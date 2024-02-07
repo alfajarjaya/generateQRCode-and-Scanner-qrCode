@@ -1,0 +1,29 @@
+{
+  "fajar": {
+    "nomor_induk": "123",
+    "nama": "Alfajjar",
+    "kelas": "XI",
+    "jurusan": "TKJ"
+  },
+
+  "mifta": {
+    "nomor_induk": "456",
+    "nama": "Miftahul",
+    "kelas": "XI",
+    "jurusan": "TKJ"
+  },
+
+  "sandi": {
+    "nomor_induk": "789",
+    "nama": "Kurnia Sandi",
+    "kelas": "XI",
+    "jurusan": "TKJ"
+  },
+
+  "nabil": {
+    "nomor_induk": "1011",
+    "nama": "Nabil",
+    "kelas": "XI",
+    "jurusan": "TKJ"
+  }
+}

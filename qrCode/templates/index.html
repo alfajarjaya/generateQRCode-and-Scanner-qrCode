@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="mobile-phone dekstop">
+    <meta name="qrCode" content="generate-qr-code">
+    <title>qrCode Generate</title>
+</head>
+<body>
+    <form action="/templates" method="post">
+        <label for="nama">Masukkan nama file / output : </label>
+        <input type="text" name="nama" id="nama">
+        <br />
+        <label for="select">Pilih File yang ada : </label>
+        <select name="select" id="select">
+            <option value="">Pilih item</option>
+            {% for i in file %}
+            <option value="{{i}}">{{i}}</option>
+            {% endfor %}
+        </select>
+        <br />
+        <button type="submit" name="btn" id="btn">Create</button>
+    </form>
+</body>
+</html>
