@@ -3,27 +3,202 @@
     "nomor_induk": "123",
     "nama": "Alfajjar",
     "kelas": "XI",
-    "jurusan": "TKJ"
+    "jurusan": "TKJ 2"
   },
 
   "mifta": {
     "nomor_induk": "456",
     "nama": "Miftahul",
     "kelas": "XI",
-    "jurusan": "TKJ"
+    "jurusan": "TKJ 2"
   },
 
   "sandi": {
     "nomor_induk": "789",
     "nama": "Kurnia Sandi",
     "kelas": "XI",
-    "jurusan": "TKJ"
+    "jurusan": "TKJ 2"
   },
 
   "nabil": {
     "nomor_induk": "1011",
     "nama": "Nabil",
     "kelas": "XI",
-    "jurusan": "TKJ"
+    "jurusan": "TKJ 2"
+  },
+
+  "agus": {
+    "nomor_induk": "1213",
+    "nama": "Agus",
+    "kelas": "XI",
+    "jurusan": "TKJ 2"
+  },
+
+  "rita": {
+    "nomor_induk": "1415",
+    "nama": "Rita",
+    "kelas": "XI",
+    "jurusan": "TKJ 2"
+  },
+
+  "bayu": {
+    "nomor_induk": "1617",
+    "nama": "Bayu",
+    "kelas": "XI",
+    "jurusan": "TKJ 2"
+  },
+
+  "diana": {
+    "nomor_induk": "1819",
+    "nama": "Diana",
+    "kelas": "XI",
+    "jurusan": "TKJ 2"
+  },
+
+  "erwin": {
+    "nomor_induk": "2021",
+    "nama": "Erwin",
+    "kelas": "XI",
+    "jurusan": "TKJ 2"
+  },
+
+  "fitri": {
+    "nomor_induk": "2223",
+    "nama": "Fitri",
+    "kelas": "XI",
+    "jurusan": "TKJ 2"
+  },
+
+  "hadi": {
+    "nomor_induk": "2425",
+    "nama": "Hadi",
+    "kelas": "XI",
+    "jurusan": "TKJ 2"
+  },
+
+  "ida": {
+    "nomor_induk": "2627",
+    "nama": "Ida",
+    "kelas": "XI",
+    "jurusan": "TKJ 2"
+  },
+
+  "joko": {
+    "nomor_induk": "2829",
+    "nama": "Joko",
+    "kelas": "XI",
+    "jurusan": "TKJ 2"
+  },
+
+  "kiki": {
+    "nomor_induk": "3031",
+    "nama": "Kiki",
+    "kelas": "XI",
+    "jurusan": "TKJ 2"
+  },
+
+  "lina": {
+    "nomor_induk": "3233",
+    "nama": "Lina",
+    "kelas": "XI",
+    "jurusan": "TKJ 2"
+  },
+
+  "maman": {
+    "nomor_induk": "3435",
+    "nama": "Maman",
+    "kelas": "XI",
+    "jurusan": "TKJ 2"
+  },
+
+  "nina": {
+    "nomor_induk": "3637",
+    "nama": "Nina",
+    "kelas": "XI",
+    "jurusan": "TKJ 2"
+  },
+
+  "opik": {
+    "nomor_induk": "3839",
+    "nama": "Opik",
+    "kelas": "XI",
+    "jurusan": "TKJ 2"
+  },
+
+  "puput": {
+    "nomor_induk": "4041",
+    "nama": "Puput",
+    "kelas": "XI",
+    "jurusan": "TKJ 2"
+  },
+
+  "qonita": {
+    "nomor_induk": "4243",
+    "nama": "Qonita",
+    "kelas": "XI",
+    "jurusan": "TKJ 2"
+  },
+
+  "rudi": {
+    "nomor_induk": "4445",
+    "nama": "Rudi",
+    "kelas": "XI",
+    "jurusan": "TKJ 2"
+  },
+
+  "siska": {
+    "nomor_induk": "4647",
+    "nama": "Siska",
+    "kelas": "XI",
+    "jurusan": "TKJ 2"
+  },
+
+  "tegar": {
+    "nomor_induk": "4849",
+    "nama": "Tegar",
+    "kelas": "XI",
+    "jurusan": "TKJ 2"
+  },
+
+  "uti": {
+    "nomor_induk": "5051",
+    "nama": "Uti",
+    "kelas": "XI",
+    "jurusan": "TKJ 2"
+  },
+
+  "vina": {
+    "nomor_induk": "5253",
+    "nama": "Vina",
+    "kelas": "XI",
+    "jurusan": "TKJ 2"
+  },
+
+  "wawan": {
+    "nomor_induk": "5455",
+    "nama": "Wawan",
+    "kelas": "XI",
+    "jurusan": "TKJ 2"
+  },
+
+  "xena": {
+    "nomor_induk": "5657",
+    "nama": "Xena",
+    "kelas": "XI",
+    "jurusan": "TKJ 2"
+  },
+
+  "yanto": {
+    "nomor_induk": "5859",
+    "nama": "Yanto",
+    "kelas": "XI",
+    "jurusan": "TKJ 2"
+  },
+
+  "zainab": {
+    "nomor_induk": "6061",
+    "nama": "Zainab",
+    "kelas": "XI",
+    "jurusan": "TKJ 2"
   }
 }

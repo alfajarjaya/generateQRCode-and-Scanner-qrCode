@@ -15,7 +15,7 @@ def index():
 
 @app.route('/templates', methods=['POST', 'GET'])
 def qr():
-    nama = request.form.get('name')
+    nama = request.form.get('nama')
     nama_file = request.form.get('select')
     
     qr = qrcode.QRCode(
@@ -28,7 +28,7 @@ def qr():
     jsonSave = file[nama_file]
     data = f'nomor induk : {jsonSave["nomor_induk"]} \n Nama: {jsonSave["nama"]} \n Kelas : {jsonSave["kelas"]} \n Jurusan : {jsonSave["jurusan"]}'
 
-    save_dir = 'd:/produktif bu Tya/App/qrCode/img/'
+    save_dir = 'd:/produktif bu Tya/App/qrCode/static'
     save_path = os.path.join(save_dir, f'{nama}.png')
 
     if not os.path.exists(save_dir):
