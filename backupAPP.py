@@ -1,7 +1,13 @@
+# Backup dari Application Scanner qr Code
+#  
+# Apabila error bisa anda ambil file ini, namun App ini belum 100% jadi.......
+
 import cv2
 import openpyxl
 from openpyxl import Workbook
 import numpy as np
+import os
+import PySimpleGUI as sg
 
 def process_qr_data(decoded_info):
     # Format data QR code
@@ -12,7 +18,7 @@ def process_qr_data(decoded_info):
         'Jurusan': ''
     }
 
-    # Pisahkan data dengan baris baru
+    # Pisahkan data saat di scan dengan baris baru
     lines = decoded_info.split('\n')
 
     # Isi data QR code ke dalam format yang telah ditentukan
@@ -53,6 +59,10 @@ def scan_and_save_qr_code(frame, worksheet):
 
             # Cek apakah semua data QR code kosong
             if any(qr_data.values()):
+                # Jika worksheet kosong, tambahkan judul
+                if worksheet.max_row == 1:
+                    worksheet.append(['Nomor Induk', 'Nama', 'Kelas', 'Jurusan'])
+
                 # Simpan data ke file Excel
                 worksheet.append([
                     qr_data['Nomor Induk'],
@@ -63,18 +73,28 @@ def scan_and_save_qr_code(frame, worksheet):
                 print('Data QR Code Tersimpan di Excel')
 
                 # Simpan workbook ke file Excel
-                workbook.save('d:/produktif bu Tya/App/barcode_data.xlsx')
+                workbook.save('d:/produktif bu Tya/App/data.xlsx')
 
-                # Menutup program setelah mendeteksi QR code
+                # Tampilkan alert bahwa data sudah masuk ke Excel
+                sg.popup('Data telah tersimpan !')
+
+                # Hentikan program setelah proses selesai
+                cap.release()
                 cv2.destroyAllWindows()
                 exit()
 
+# Mengecek apakah file Excel sudah ada
+if os.path.exists('d:/produktif bu Tya/App/data.xlsx'):
+    # Jika sudah ada, load workbook yang ada
+    workbook = openpyxl.load_workbook('d:/produktif bu Tya/App/data.xlsx')
+    worksheet = workbook.active
+else:
+    # Jika belum ada, buat workbook baru
+    workbook = Workbook()
+    worksheet = workbook.active
+
 # Inisialisasi kamera
 cap = cv2.VideoCapture(0)
-
-# Inisialisasi workbook dan worksheet
-workbook = Workbook()
-worksheet = workbook.active
 
 while True:
     ret, frame = cap.read()
@@ -85,8 +105,8 @@ while True:
     # Tampilkan frame kamera
     cv2.imshow('QR Code Scanner', frame)
 
-    # Tekan tombol 'q' untuk keluar
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    # Tekan tombol 'x' untuk keluar
+    if cv2.waitKey(1) & 0xFF == ord('x'):
         break
 
 # Tutup kamera

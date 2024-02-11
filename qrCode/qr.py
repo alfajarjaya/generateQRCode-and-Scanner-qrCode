@@ -1,3 +1,7 @@
+# Generate qrCode berbasis Application
+#
+# Hasil generate akan tersimpan di folder img ( ubah sesuai directory yang diinginkan )
+
 import PySimpleGUI as sg
 from qrcode.main import QRCode
 import json

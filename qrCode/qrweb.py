@@ -1,3 +1,7 @@
+# Generate qrCode berbasis WEB
+#
+# Hasil generate akan tersimpan di folder static ( ubah sesuai directory yang diinginkan )
+
 from flask import Flask, render_template, request
 from qrcode.main import QRCode
 import json
@@ -26,7 +30,7 @@ def qr():
     )
     
     jsonSave = file[nama_file]
-    data = f'nomor induk : {jsonSave["nomor_induk"]} \n Nama: {jsonSave["nama"]} \n Kelas : {jsonSave["kelas"]} \n Jurusan : {jsonSave["jurusan"]}'
+    data = f'Nomor Induk : {jsonSave["nomor_induk"]} \n Nama: {jsonSave["nama"]} \n Kelas : {jsonSave["kelas"]} \n Jurusan : {jsonSave["jurusan"]}'
 
     save_dir = 'd:/produktif bu Tya/App/qrCode/static'
     save_path = os.path.join(save_dir, f'{nama}.png')

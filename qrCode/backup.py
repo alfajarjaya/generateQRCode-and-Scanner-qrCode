@@ -1,3 +1,7 @@
+# Backup dari Application Generate qr Code
+#  
+# Apabila error bisa anda ambil file ini, namun App ini belum 100% jadi.......
+
 import qrcode
 from qrcode.main import QRCode
 import json

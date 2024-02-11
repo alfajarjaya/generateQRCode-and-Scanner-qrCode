@@ -1,9 +1,18 @@
+# Scanner qr Code berbasis Application
+#  
+# Data akan tersimpan di file excel { data.xlsx }
+# Data juga tersimpan di database { siswa dengan tabel qrcode } 
+
 import cv2
 import openpyxl
 from openpyxl import Workbook
 import numpy as np
 import os
 import PySimpleGUI as sg
+import mysql.connector
+
+mysqldb = mysql.connector.connect(host="localhost", user="root", password="", database="siswa", port=3306)
+mycursor = mysqldb.cursor()
 
 def process_qr_data(decoded_info):
     # Format data QR code
@@ -49,9 +58,10 @@ def scan_and_save_qr_code(frame, worksheet):
 
             # Proses data QR code
             qr_data = process_qr_data(decoded_info[i])
-
+            
             # Print pesan debug
-            print('QR Code Data:', qr_data)
+            i = f'Nomor Induk : {qr_data["Nomor Induk"]}, \nNama : {qr_data["Nama"]} ,\nKelas : {qr_data["Kelas"]},\nJurusan : {qr_data["Jurusan"]}'
+            sg.popup('QR Code Data:', i)
 
             # Cek apakah semua data QR code kosong
             if any(qr_data.values()):
@@ -66,7 +76,13 @@ def scan_and_save_qr_code(frame, worksheet):
                     qr_data['Kelas'],
                     qr_data['Jurusan']
                 ])
-                print('Data QR Code Tersimpan di Excel')
+                
+                sql = "INSERT INTO qrcode (Nomor_Induk, Nama, Kelas, Jurusan) VALUES (%s, %s, %s, %s)"
+                values = (qr_data['Nomor Induk'], qr_data['Nama'], qr_data['Kelas'], qr_data['Jurusan'])
+                mycursor.execute(sql, values)
+                mysqldb.commit()
+                
+                
 
                 # Simpan workbook ke file Excel
                 workbook.save('d:/produktif bu Tya/App/data.xlsx')
